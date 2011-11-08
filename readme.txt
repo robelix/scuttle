@@ -1,7 +1,9 @@
-Scuttle 0.9.0
+Scuttle (Development Snapshot)
 http://scuttle.org/
 
 Copyright (C) 2004 - 2010 Marcus Campbell
+Copyright (C) 2011 Thomas Niepraschk
+Copyright (C) 2011 Benjamin Mako Hill
 Available under the GNU General Public License
 
 ============
