@@ -8,6 +8,9 @@
 require_once 'httpauth.inc.php';
 require_once '../header.inc.php';
 
+// set user as logged in so private bookmarks are exported
+$loggedon = true;
+
 $bookmarkservice =& ServiceFactory::getServiceInstance('BookmarkService');
 $userservice     =& ServiceFactory::getServiceInstance('UserService');
 
@@ -43,7 +46,7 @@ foreach($bookmarks['bookmarks'] as $row) {
         $taglist = 'system:unfiled';
     }
 
-    echo "\t<post href=\"". filter($row['bAddress'], 'xml') .'" description="'. filter($row['bTitle'], 'xml') .'" '. $description .'hash="'. md5($row['bAddress']) .'" tag="'. filter($taglist, 'xml') .'" time="'. gmdate('Y-m-d\TH:i:s\Z', strtotime($row['bDatetime'])) ."\" />\r\n";
+    echo "\t<post href=\"". filter($row['bAddress'], 'xml') .'" description="'. filter($row['bTitle'], 'xml') .'" '. $description .'hash="'. md5($row['bAddress']) . ($row['bStatus'] ? '" shared="no' : '') .'" tag="'. filter($taglist, 'xml') .'" time="'. gmdate('Y-m-d\TH:i:s\Z', strtotime($row['bDatetime'])) ."\" />\r\n";
 }
 
 echo '</posts>';
