@@ -44,6 +44,8 @@ class sql_db
 		{
 			if (@mysql_select_db($this->dbname))
 			{
+				#Set utf-8
+				mysql_query('SET CHARACTER SET utf8', $this->db_connect_id);
 				return $this->db_connect_id;
 			}
 		}
