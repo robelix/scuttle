@@ -41,7 +41,11 @@ if (isset($_GET['popup'])) {
 
 <?php
 if (isset($subtitle)) {
-    echo '<h2>'. $subtitle ."</h2>\n";
+    echo '<h2>'. $subtitle;
+    if (isset($total)) {
+        echo " (" . $total . ")";
+    }
+    echo "</h2>\n";
 }
 if (isset($error)) {
     echo '<p class="error">'. $error ."</p>\n";
