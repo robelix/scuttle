@@ -103,7 +103,7 @@ if (count($bookmarks) > 0) {
         if ($row['bDatetime'] == $row['bModified']) {
             echo '<div class="meta">'. date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
         } else {
-            echo '<div class="meta">updated: '. date($GLOBALS['shortdate'], strtotime($row['bModified'])) . ", original: ". date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
+            echo '<div class="meta"><span id="date-updated">updated: '. date($GLOBALS['shortdate'], strtotime($row['bModified'])) . '</span>, <span id="date-original">original: '. date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . "</span>" . $cats . $copy . $edit ."</div>\n";
         }
         echo "</li>\n";
     }

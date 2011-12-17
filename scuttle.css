@@ -181,6 +181,14 @@ div.meta {
 div.meta span {
   color: #F00;
 }
+/* bookmark date fields: updated and created */
+div.meta span#date-updated {
+    color: #285;
+}
+div.meta span#date-original {
+    background: #eee;
+    color: #aaa;
+}
 li.xfolkentry {
   border-bottom: 1px solid #DDD;
   margin-bottom: 0;
