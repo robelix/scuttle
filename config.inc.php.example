@@ -64,14 +64,18 @@ $adminemail = 'admin@example.org';
 #                       be considered recent.
 # defaultOrderBy:   The default order in which bookmarks will appear.
 #                   Possible values are:
-#                   date_desc   - By date of entry descending.
-#                                 Latest entry first. (Default)
-#                   date_asc    - By date of entry ascending.
-#                                 Earliest entry first.
-#                   title_desc  - By title, descending alphabetically.
-#                   title_asc   - By title, ascending alphabetically.
-#                   url_desc    - By URL, descending alphabetically.
-#                   url_asc     - By URL, ascending alphabetically.
+#                   date_desc     - By date of entry descending.
+#                                   Latest entry first. (Default)
+#                   date_asc      - By date of entry ascending.
+#                                   Earliest entry first.
+#                   mod_date_desc - By modification date descending.
+#                                   Latest modified entry first.
+#                   mod_date_asc  - By modification date ascending.
+#                                   Earliest modified entry first.
+#                   title_desc    - By title, descending alphabetically.
+#                   title_asc     - By title, ascending alphabetically.
+#                   url_desc      - By URL, descending alphabetically.
+#                   url_asc       - By URL, ascending alphabetically.
 # TEMPLATES_DIR: The directory where the template files should be
 #                loaded from (the *.tpl.php files)
 # root         : Set to NULL to autodetect the root url of the website

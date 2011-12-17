@@ -276,6 +276,12 @@ class BookmarkService {
           case 'date_asc':
               $query_5 = ' ORDER BY B.bDatetime ASC ';
               break;
+          case 'mod_date_desc':
+              $query_5 = ' ORDER BY B.bModified DESC ';
+              break;
+          case 'mod_date_asc':
+              $query_5 = ' ORDER BY B.bModified ASC ';
+              break;
           case 'title_desc':
               $query_5 = ' ORDER BY B.bTitle DESC ';
               break;
