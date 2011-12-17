@@ -100,7 +100,11 @@ if (count($bookmarks) > 0) {
         if ($row['bDescription'] != '') {
             echo '<div class="description">'. filter($row['bDescription']) ."</div>\n";
         }
-        echo '<div class="meta">'. date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
+        if ($row['bDatetime'] == $row['bModified']) {
+            echo '<div class="meta">'. date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
+        } else {
+            echo '<div class="meta">updated: '. date($GLOBALS['shortdate'], strtotime($row['bModified'])) . ", original: ". date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
+        }
         echo "</li>\n";
     }
     ?>
