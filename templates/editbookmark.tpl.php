@@ -69,7 +69,7 @@ switch ($row['bStatus']) {
 </form>
 <script type="text/javascript">
 $(function() {
-  $("#address").focus();
+  $("#tags").focus();
 });
 </script>
 
