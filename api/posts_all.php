@@ -45,8 +45,14 @@ foreach($bookmarks['bookmarks'] as $row) {
     } else {
         $taglist = 'system:unfiled';
     }
+    // The privacy setting in scuttle is to set bStatus to 2 in the database.
+    if(trim($row['bStatus']) == '2') {
+        $shared = "no";
+    } else {
+        $shared = "yes";
+    }
 
-    echo "\t<post href=\"". filter($row['bAddress'], 'xml') .'" description="'. filter($row['bTitle'], 'xml') .'" '. $description .'hash="'. md5($row['bAddress']) . ($row['bStatus'] ? '" shared="no' : '') .'" tag="'. filter($taglist, 'xml') .'" time="'. gmdate('Y-m-d\TH:i:s\Z', strtotime($row['bDatetime'])) ."\" />\r\n";
+    echo "\t<post href=\"". filter($row['bAddress'], 'xml') .'" shared="' . $shared . '" description="'. filter($row['bTitle'], 'xml') .'" '. $description .'hash="'. md5($row['bAddress']) . ($row['bStatus'] ? '" shared="no' : '') .'" tag="'. filter($taglist, 'xml') .'" time="'. gmdate('Y-m-d\TH:i:s\Z', strtotime($row['bDatetime'])) ."\" />\r\n";
 }
 
 echo '</posts>';
