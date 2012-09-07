@@ -19,7 +19,7 @@ class UserService {
   var $tablename;
   var $sessionkey;
   var $cookiekey;
-  var $cookietime = 1209600; // 2 weeks
+  var $cookietime = 63072000; // 2 years
 
     function UserService(&$db) {
         $this->db =& $db;
