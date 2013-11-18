@@ -25,6 +25,11 @@ $templateservice =& ServiceFactory::getServiceInstance('TemplateService');
 $tplVars   = array();
 $completed = FALSE;
 
+if ($disable_registration) {
+    echo '<h1>registration disabled</h1>';
+    exit;
+}
+
 if ($_POST['submitted']) {
   if (!$completed) {  
     $posteduser = trim(utf8_strtolower($_POST['username']));

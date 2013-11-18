@@ -105,6 +105,9 @@ $adminemail = 'admin@example.org';
 #                       0 = public
 #                       1 = shared with watchlist
 #                       2 = private
+# 
+# disable_registration: TRUE disables registration completely
+#
 ######################################################################
 
 $top_include       = 'top.inc.php';
@@ -145,5 +148,7 @@ $email_blacklist   = array(
                      );
 
 $default_new_status = 0; 
+
+$disable_registration = FALSE;
                      
 include_once 'debug.inc.php';
