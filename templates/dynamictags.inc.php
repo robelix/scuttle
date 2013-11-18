@@ -23,7 +23,7 @@ $userservice =& ServiceFactory::getServiceInstance('UserService');
 
 $logged_on_userid = $userservice->getCurrentUserId();
 
-$userPopularTags        =& $tagservice->getPopularTags($logged_on_userid, 25, $logged_on_userid);
+$userPopularTags        =& $tagservice->getPopularTags($logged_on_userid, 100, $logged_on_userid);
 $userAllTags            =& $tagservice->getPopularTags($logged_on_userid, 10000, $logged_on_userid);
 $userPopularTagsCloud   =& $tagservice->tagCloud($userPopularTags, 5, 90, 175);
 $userPopularTagsCount   = count($userPopularTags);
