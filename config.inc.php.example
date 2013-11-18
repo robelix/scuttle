@@ -100,6 +100,11 @@ $adminemail = 'admin@example.org';
 #                     may otherwise match the blacklist.
 # email_blacklist : Array of regex patterns. Registration is blocked if a
 #                     match is found.
+#
+# default_new_status:  default status for new entries
+#                       0 = public
+#                       1 = shared with watchlist
+#                       2 = private
 ######################################################################
 
 $top_include       = 'top.inc.php';
@@ -139,4 +144,6 @@ $email_blacklist   = array(
                       '/mailinator\.com/i'
                      );
 
+$default_new_status = 0; 
+                     
 include_once 'debug.inc.php';

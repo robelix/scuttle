@@ -151,7 +151,8 @@ if ($templatename == 'editbookmark.tpl') {
                 'bTitle' => stripslashes($_GET['title']),
                 'bAddress' => stripslashes($_GET['address']),
                 'bDescription' => stripslashes($_GET['description']),
-                'tags' => ($_GET['tags'] ? explode(',', stripslashes($_GET['tags'])) : array())
+                'tags' => ($_GET['tags'] ? explode(',', stripslashes($_GET['tags'])) : array()),
+                'bStatus' => intval($default_new_status)
             );
         }
         $title = T_('Add a Bookmark');
