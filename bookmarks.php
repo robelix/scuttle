@@ -176,7 +176,7 @@ if ($templatename == 'editbookmark.tpl') {
         $tplVars['sidebar_blocks'][] = 'related';
         $tplVars['sidebar_blocks'][] = 'tagactions';
     }
-    $tplVars['popCount'] = 30;
+    $tplVars['popCount'] = 100;
     $tplVars['sidebar_blocks'][] = 'popular';
     
     $tplVars['userid'] = $userid;

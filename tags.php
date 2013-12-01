@@ -67,7 +67,7 @@ if (isset($_GET['page']) && intval($_GET['page']) > 1) {
 
 $tplVars['page'] = $page;
 $tplVars['start'] = $start;
-$tplVars['popCount'] = 25;
+$tplVars['popCount'] = 100;
 $tplVars['currenttag'] = $cat;
 $tplVars['sidebar_blocks'] = array('related', 'popular');
 $tplVars['subtitle'] = filter($pagetitle);

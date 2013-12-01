@@ -96,7 +96,7 @@ if (isset($_POST['terms'])) {
     
     $tplVars['page'] = $page;
     $tplVars['start'] = $start;
-    $tplVars['popCount'] = 25;
+    $tplVars['popCount'] = 100;
     $tplVars['sidebar_blocks'] = array('recent');
     $tplVars['range'] = $range;
     $tplVars['terms'] = $terms;

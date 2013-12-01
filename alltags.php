@@ -66,7 +66,7 @@ if (isset($user) && $user != '') {
 }
 
 $tags =& $tagservice->getTags($userid);
-$tplVars['tags'] =& $tagservice->tagCloud($tags, 5, 90, 225, getSortOrder()); 
+$tplVars['tags'] =& $tagservice->tagCloud($tags, 5, 90, 225, getSortOrder('alphabet_asc')); 
 $tplVars['user'] = $user;
 
 if (isset($userid)) {

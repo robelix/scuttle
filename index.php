@@ -53,7 +53,7 @@ $perpage = getPerPageCount();
 
 $tplVars['page']     = 0;
 $tplVars['start']    = 0;
-$tplVars['popCount'] = 30;
+$tplVars['popCount'] = 100;
 $tplVars['sidebar_blocks'] = array('recent');
 $tplVars['range'] = 'all';
 $tplVars['pagetitle'] = T_('Store, share and tag your favourite links');

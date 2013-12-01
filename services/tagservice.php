@@ -254,7 +254,7 @@ class TagService {
         return $this->db->sql_fetchrowset($dbresult);
     }
 
-    function &getPopularTags($user = NULL, $limit = 30, $logged_on_user = NULL, $days = NULL) {
+    function &getPopularTags($user = NULL, $limit = 100, $logged_on_user = NULL, $days = NULL) {
         // Only count the tags that are visible to the current user.
         if (($user != $logged_on_user) || is_null($user) || ($user === false))
             $privacy = ' AND B.bStatus = 0';
