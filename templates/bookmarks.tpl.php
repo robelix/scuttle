@@ -96,7 +96,7 @@ if (count($bookmarks) > 0) {
         
         // Output
         echo '<li class="xfolkentry'. $access .'">'."\n";
-        echo '<div class="link"><a href="'. $address .'"'. $rel .' class="taggedlink">'. filter($row['bTitle']) ."</a></div>\n";
+        echo '<div class="link"><a href="'. $address .'"'. $rel .' target="_blank" class="taggedlink">'. filter($row['bTitle']) ."</a></div>\n";
         if (preg_match("/.jpg$/i",$address)||preg_match("/.png$/i",$address)||preg_match("/.gif$/i",$address)) {
             echo '<a href="'.$address.'"> <img src="'. $address .'"'.' height="100" alt=""/>'."</a>\n";
         }
