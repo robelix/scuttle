@@ -52,7 +52,7 @@ foreach($bookmarks['bookmarks'] as $row) {
         $shared = "yes";
     }
 
-    echo "\t<post href=\"". filter($row['bAddress'], 'xml') .'" shared="' . $shared . '" description="'. filter($row['bTitle'], 'xml') .'" '. $description .'hash="'. md5($row['bAddress']) . ($row['bStatus'] ? '" shared="no' : '') .'" tag="'. filter($taglist, 'xml') .'" time="'. gmdate('Y-m-d\TH:i:s\Z', strtotime($row['bDatetime'])) ."\" />\r\n";
+    echo "\t<post href=\"". filter($row['bAddress'], 'xml') .'" shared="' . $shared . '" description="'. filter($row['bTitle'], 'xml') .'" '. $description .'hash="'. md5($row['bAddress']) .'" tag="'. filter($taglist, 'xml') .'" time="'. gmdate('Y-m-d\TH:i:s\Z', strtotime($row['bDatetime'])) ."\" />\r\n";
 }
 
 echo '</posts>';
